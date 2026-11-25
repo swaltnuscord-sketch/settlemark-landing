@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FAF9F6">
+  <title>Settlemark — Deterministic Cash Application &amp; AR Recovery for QuickBooks Online</title>
+  <meta name="description" content="Recover 60–90+ day overdue invoices and match lump-sum ACH deposits in 2 seconds. 14-day deployment for 10–50 staff B2B firms on QuickBooks Online. 2× Cash-Recovery Guarantee.">
+  <meta name="robots" content="index,follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#FAF9F6;--surface:#fff;--subtle:#F2F1EC;--ink:#11181C;--secondary:#525B60;--muted:#7C858A;--line:#E4E4E0;--green:#14453D;--green-hover:#0D312B;--verified:#15803D;--verified-bg:#ECFDF3;--warning:#B45309;--warning-bg:#FEF3C7;--serif:"Newsreader",Georgia,serif;--sans:"Plus Jakarta Sans",Arial,sans-serif;--mono:"IBM Plex Mono",monospace;--container:1160px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}button,input,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}a{color:inherit}.mono,.money,.metric,.invoice-id,.eyebrow,.table-num{font-family:var(--mono);font-variant-numeric:tabular-nums lining-nums}.container{width:min(var(--container),calc(100% - 48px));margin-inline:auto}.serif,h1,h2,h3,.brand-name{font-family:var(--serif);font-weight:500;letter-spacing:-.025em;line-height:1.12}.eyebrow{font-size:11px;letter-spacing:.095em;text-transform:uppercase;color:var(--muted);font-weight:500}.section{padding:104px 0;border-top:1px solid var(--line)}.section-head{max-width:720px;margin-bottom:42px}.section-head h2{font-size:clamp(34px,4vw,46px);margin:13px 0 15px}.section-head p{color:var(--secondary);max-width:650px;margin:0}.button{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid transparent;border-radius:6px;padding:13px 18px;background:var(--green);color:white;text-decoration:none;font-size:13px;font-weight:700;transition:background .18s,transform .18s;cursor:pointer}.button:hover{background:var(--green-hover);transform:translateY(-1px)}.button:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #86B8AA;outline-offset:3px}.button.secondary{background:transparent;color:var(--ink);border-color:var(--line)}.button.secondary:hover{background:var(--subtle)}.button.full{width:100%}.text-link{color:var(--green);font-weight:700;text-decoration:underline;text-underline-offset:4px;font-size:13px}.topbar{height:72px;position:sticky;top:0;z-index:20;background:rgba(250,249,246,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;text-decoration:none;flex-shrink:0}.brand-mark{width:25px;height:25px;border:1.5px solid var(--green);display:grid;place-items:center;position:relative}.brand-mark:before{content:"";width:10px;height:10px;background:var(--green);display:block}.brand-name{font-size:25px;letter-spacing:-.04em}.nav-links{display:flex;align-items:center;gap:27px}.nav-links a{text-decoration:none;color:var(--secondary);font-size:12px;font-weight:600}.nav-links a:hover{color:var(--green)}.nav .button{padding:10px 14px;font-size:12px}.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:6px;padding:8px;color:var(--ink)}.hero{padding:82px 0 88px}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:58px;align-items:center}.hero-copy .eyebrow{display:inline-block;background:var(--subtle);padding:7px 10px;border-radius:3px;color:var(--secondary);font-size:10px}.hero h1{font-size:clamp(42px,5.1vw,62px);margin:22px 0 20px;max-width:650px}.hero-copy>p{font-size:17px;line-height:1.7;color:var(--secondary);max-width:590px;margin:0}.cta-row{display:flex;flex-wrap:wrap;gap:11px;margin:28px 0 21px}.trust{display:flex;flex-wrap:wrap;gap:10px 18px;color:var(--secondary);font-size:11px}.trust span:before{content:"✓";color:var(--verified);font-weight:700;margin-right:6px}.terminal{background:var(--surface);border:1px solid var(--line);border-radius:10px;box-shadow:0 16px 42px rgba(17,24,28,.055);overflow:hidden}.terminal-top{padding:17px 19px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}.terminal-title{font:600 10px var(--mono);letter-spacing:.08em;color:var(--secondary)}.status{font:500 10px var(--mono);color:var(--verified);background:var(--verified-bg);padding:6px 8px;border-radius:3px;white-space:nowrap}.deposit{padding:18px 20px;background:#FCFCFA;border-bottom:1px solid var(--line)}.deposit-label{font-size:10px;color:var(--muted);margin-bottom:7px}.deposit-line{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font:500 11px var(--mono)}.deposit-note{font-size:10px;color:var(--muted);margin-top:6px}.tabs{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--line)}.tab{padding:13px 8px;border:0;background:white;color:var(--secondary);font-size:10px;font-weight:700;cursor:pointer;border-bottom:2px solid transparent}.tab[aria-selected=true]{color:var(--green);border-bottom-color:var(--green);background:#FBFCFA}.ledger-wrap{padding:14px 19px 8px;min-height:214px}.ledger-heading{display:flex;justify-content:space-between;color:var(--muted);font:10px var(--mono);padding:3px 0 9px;border-bottom:1px solid var(--line)}.ledger-row{display:grid;grid-template-columns:42px 1fr auto;gap:8px;padding:10px 0;border-bottom:1px solid #F0F0EC;font:11px var(--mono);align-items:center}.ledger-row .name{font-family:var(--sans);font-size:11px;color:var(--secondary)}.ledger-total{display:flex;justify-content:space-between;padding:13px 0 8px;font:11px var(--mono)}.variance{color:var(--verified);font-weight:600}.variance.warn{color:var(--warning)}.shortpay{display:inline-block;margin:3px 0 8px;background:var(--warning-bg);color:var(--warning);font:600 9px var(--mono);padding:6px 8px;border-radius:3px}.terminal-action{padding:13px 19px 16px;border-top:1px solid var(--line)}.terminal-action button{width:100%;border:1px solid var(--green);border-radius:5px;background:white;color:var(--green);padding:10px;font-size:11px;font-weight:700;cursor:pointer}.terminal-action button.approved{background:var(--verified-bg);border-color:#B7E4C7;color:var(--verified)}.terminal-caption{text-align:center;font:10px var(--mono);color:var(--muted);margin-top:13px}.problem-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.pain-card{background:white;border:1px solid var(--line);border-radius:8px;padding:23px 21px}.pain-card .metric{font-size:10px;color:var(--warning);letter-spacing:.04em}.pain-card blockquote{font:500 21px/1.3 var(--serif);margin:17px 0;color:var(--ink)}.pain-card p{font-size:12px;color:var(--secondary);margin:0}.calculator{max-width:900px;margin:auto;background:white;border:1px solid var(--line);border-radius:10px;overflow:hidden}.calc-head{padding:28px 32px;border-bottom:1px solid var(--line)}.calc-head h3{font-size:31px;margin:0 0 6px}.calc-head p{color:var(--secondary);margin:0;font-size:13px}.calc-body{display:grid;grid-template-columns:1fr 1fr}.calc-controls{padding:30px 32px;border-right:1px solid var(--line)}.range-group+ .range-group{margin-top:28px}.range-top{display:flex;justify-content:space-between;gap:10px;font-size:12px;font-weight:600;margin-bottom:12px}.range-top output{font:500 13px var(--mono);color:var(--green)}input[type=range]{width:100%;accent-color:var(--green);cursor:pointer}.range-limits{display:flex;justify-content:space-between;color:var(--muted);font:10px var(--mono)}.calc-results{padding:30px 32px;background:#FCFCFA}.result{padding:13px 0;border-bottom:1px solid var(--line)}.result:last-of-type{border:0}.result label{display:block;color:var(--secondary);font-size:11px;margin-bottom:5px}.result strong{font:500 24px var(--mono);font-variant-numeric:tabular-nums;color:var(--green)}.result:nth-child(2) strong{color:var(--ink)}.result:nth-child(3) strong{color:var(--ink)}.calc-note{font-size:10px;color:var(--muted);margin:10px 0 0}.calc-cta{padding:17px 32px;border-top:1px solid var(--line);background:white}.module-list{border-top:1px solid var(--line)}.module{display:grid;grid-template-columns:90px 1fr;gap:22px;padding:27px 0;border-bottom:1px solid var(--line)}.module-number{font:500 22px var(--mono);color:var(--green)}.module h3{font-size:25px;margin:0 0 7px}.module p{color:var(--secondary);font-size:13px;max-width:820px;margin:0}.security-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.security-card{padding:23px;background:white;border:1px solid var(--line);border-radius:8px}.line-icon{width:34px;height:34px;border:1px solid var(--line);display:grid;place-items:center;color:var(--green);font:16px var(--mono);margin-bottom:19px}.security-card h3{font-size:22px;margin:0 0 9px}.security-card p{font-size:12px;color:var(--secondary);margin:0}.timeline{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.timeline-step{padding:23px 18px 25px 0;position:relative}.timeline-step+.timeline-step{padding-left:20px;border-left:1px solid var(--line)}.timeline-step .step-time{font:500 10px var(--mono);color:var(--green);letter-spacing:.04em}.timeline-step h3{font-size:21px;margin:12px 0 8px}.timeline-step p{font-size:12px;color:var(--secondary);margin:0}.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}.price-card,.policy-card{background:white;border:1px solid var(--line);border-radius:9px;padding:27px}.price-card{border:2px solid var(--green)}.price-badge{display:inline-block;background:var(--subtle);padding:6px 8px;font:10px var(--mono);color:var(--secondary)}.price-line{display:flex;align-items:baseline;gap:12px;margin:20px 0 2px}.price{font:500 49px var(--serif);letter-spacing:-.04em}.old-price{color:var(--muted);text-decoration:line-through;font:12px var(--mono)}.price-sub{font-size:11px;color:var(--secondary)}.terms{font:11px var(--mono);background:var(--subtle);padding:12px;margin:18px 0}.check-list{list-style:none;padding:0;margin:19px 0 23px}.check-list li{font-size:12px;padding:8px 0;border-bottom:1px solid #F0F0EC;color:var(--secondary)}.check-list li:before{content:"✓";color:var(--verified);margin-right:9px;font-weight:700}.policy-stack{display:grid;gap:14px}.policy-card h3{font-size:23px;margin:0 0 10px}.policy-card p{font-size:12px;color:var(--secondary);margin:0}.policy-card strong{color:var(--ink)}.faq-list{border-top:1px solid var(--line);max-width:900px}.faq-item{border-bottom:1px solid var(--line)}.faq-question{width:100%;display:flex;justify-content:space-between;align-items:center;text-align:left;gap:20px;padding:19px 0;background:none;border:0;color:var(--ink);font:500 21px var(--serif);cursor:pointer}.faq-question span:last-child{font:16px var(--mono);color:var(--green)}.faq-answer{padding:0 36px 19px 0;color:var(--secondary);font-size:13px;max-width:820px}.faq-answer[hidden]{display:none}.audit-shell{display:grid;grid-template-columns:.8fr 1.2fr;background:white;border:1px solid var(--line);border-top:4px solid var(--green);border-radius:8px;overflow:hidden}.audit-intro{padding:35px 31px;background:#FCFCFA;border-right:1px solid var(--line)}.audit-intro h2{font-size:34px;margin:12px 0 17px}.audit-intro ul{padding-left:18px;color:var(--secondary);font-size:12px}.audit-intro li{margin:0 0 12px}.audit-form{padding:32px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:6px}.field.full-field{grid-column:1/-1}.field label,.field legend{font-size:11px;font-weight:700;color:var(--secondary)}.field input,.field select{width:100%;height:44px;border:1px solid var(--line);border-radius:5px;padding:0 11px;background:white;color:var(--ink);font-size:12px}.field input::placeholder{color:#9AA1A3}.field input:focus,.field select:focus{border-color:var(--green);outline:2px solid #D6E8E2}.field fieldset{border:0;padding:0;margin:0}.radio-line{display:flex;gap:9px;align-items:flex-start;margin:10px 0;color:var(--secondary);font-size:11px}.radio-line input{width:auto;height:auto;margin-top:4px;accent-color:var(--green)}.form-note{font-size:10px;color:var(--muted);text-align:center;margin:11px 0 0}.form-error{color:#B42318;font-size:11px;margin:10px 0}.form-success{padding:30px;background:var(--verified-bg);border:1px solid #B7E4C7;border-radius:6px}.form-success h3{font-size:27px;margin:0 0 9px;color:#14532D}.form-success p{font-size:13px;color:#315B40}.form-success .notice{font-size:11px;color:#315B40;margin-top:14px}.footer{padding:34px 0;border-top:1px solid var(--line)}.footer-inner{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}.footer-brand{font:500 21px var(--serif)}.footer p,.footer small{font-size:10px;color:var(--secondary);margin:5px 0}.footer-links{display:flex;gap:17px;flex-wrap:wrap;justify-content:flex-end}.footer-links a{font-size:10px;color:var(--secondary);text-decoration:none}.modal-backdrop{position:fixed;inset:0;z-index:50;background:rgba(17,24,28,.48);display:grid;place-items:center;padding:20px}.modal-backdrop[hidden]{display:none}.modal{background:var(--bg);width:min(680px,100%);max-height:min(86vh,850px);overflow:auto;border-radius:9px;border:1px solid var(--line);box-shadow:0 24px 70px rgba(0,0,0,.2)}.modal-head{position:sticky;top:0;background:var(--bg);padding:17px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;z-index:1}.modal-head h2{font-size:24px;margin:0}.close-modal{border:1px solid var(--line);background:white;border-radius:5px;padding:6px 10px;cursor:pointer}.modal-content{padding:24px}.report{background:white;border:1px solid var(--line);padding:25px}.report-top{display:flex;justify-content:space-between;border-bottom:2px solid var(--ink);padding-bottom:13px}.report h3{font-size:28px;margin:19px 0 5px}.report-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0}.report-stat{background:var(--subtle);padding:12px}.report-stat small{display:block;color:var(--muted);font-size:9px}.report-stat strong{display:block;font:500 15px var(--mono);margin-top:6px}.report table{width:100%;border-collapse:collapse;font:10px var(--mono);margin-top:12px}.report th,.report td{text-align:left;padding:9px 5px;border-bottom:1px solid var(--line)}.report th{color:var(--muted)}.guide-list{padding-left:20px}.guide-list li{padding:0 0 14px 5px;color:var(--secondary);font-size:13px}.guide-list strong{color:var(--ink)}.guide-tip{padding:13px;background:var(--subtle);font-size:12px;color:var(--secondary);border-left:3px solid var(--green)}.disclaimer{font-size:10px;color:var(--muted);margin-top:12px}
+    @media(max-width:1000px){.hero-grid{gap:30px}.nav-links{gap:15px}.nav-links a{font-size:11px}.hero h1{font-size:48px}}
+    @media(max-width:767px){.container{width:min(100% - 36px,var(--container))}.section{padding:67px 0}.topbar{height:64px}.brand-name{font-size:23px}.nav .button{display:none}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:63px;left:0;right:0;padding:15px 22px 20px;background:var(--bg);border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:15px}.nav-links.open{display:flex}.hero{padding:58px 0 65px}.hero-grid{grid-template-columns:1fr;gap:35px}.hero h1{font-size:43px}.hero-copy>p{font-size:15px}.cta-row .button{width:100%}.problem-grid,.security-grid{grid-template-columns:1fr}.pain-card{padding:20px}.calc-body{grid-template-columns:1fr}.calc-controls{border-right:0;border-bottom:1px solid var(--line);padding:24px}.calc-results{padding:24px}.calc-head{padding:23px}.calc-cta{padding:16px 23px}.module{grid-template-columns:44px 1fr;gap:12px;padding:22px 0}.module h3{font-size:22px}.timeline{grid-template-columns:1fr;border:0}.timeline-step,.timeline-step+.timeline-step{padding:19px 0;border-left:0;border-bottom:1px solid var(--line)}.pricing-grid{grid-template-columns:1fr}.audit-shell{grid-template-columns:1fr}.audit-intro{border-right:0;border-bottom:1px solid var(--line);padding:27px}.audit-form{padding:24px}.form-grid{grid-template-columns:1fr}.field.full-field{grid-column:auto}.footer-inner{flex-direction:column}.footer-links{justify-content:flex-start}.report-stats{grid-template-columns:1fr}.deposit-line{font-size:10px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="#" aria-label="Settlemark home"><span class="brand-mark" aria-hidden="true"></span><span class="brand-name">Settlemark</span></a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#system">How It Works</a><a href="#security">Security</a><a href="#pricing">Guarantee &amp; Pricing</a><a href="#faq">FAQ</a>
+      </nav>
+      <a class="button" href="#audit-form">Request 48-Hr Audit <span aria-hidden="true">→</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">For 10–50 staff B2B service firms on QuickBooks Online</span>
+          <h1>Turn 60-day overdue invoices into cash—and match lump-sum deposits in 2 seconds.</h1>
+          <p>We deploy a deterministic cash-application and polite follow-up workflow around your QuickBooks Online in 14 days. Zero unapproved ledger edits. Zero $55K/yr AR hires.</p>
+          <div class="cta-row"><a class="button" href="#audit-form">Get Your Free 48-Hr AR Leak Audit <span aria-hidden="true">→</span></a><button class="button secondary" type="button" data-modal="sampleModal">View Sample Audit Report</button></div>
+          <div class="trust"><span>Zero QuickBooks credentials required for audit</span><span>Client names can be anonymized</span><span>2× Attributed Cash Guarantee</span></div>
+        </div>
+        <div>
+          <div class="terminal" aria-label="Interactive deterministic matcher preview">
+            <div class="terminal-top"><span class="terminal-title">INCOMING BANK DEPOSIT</span><span class="status" id="matchStatus">MATCHED IN 0.18s</span></div>
+            <div class="deposit"><div class="deposit-label">BANK FEED · ACH CREDIT</div><div class="deposit-line"><span id="depositMemo">ACH CR · ACME CORPORATE HQ</span><strong class="money" id="depositAmount">$30,768.00</strong></div><div class="deposit-note">No invoice number in wire memo</div></div>
+            <div class="tabs" role="tablist" aria-label="Reconciliation examples">
+              <button class="tab" id="exactTab" role="tab" aria-selected="true" aria-controls="ledgerPanel">Exact Match · $30,768.00</button>
+              <button class="tab" id="shortTab" role="tab" aria-selected="false" aria-controls="ledgerPanel">Short-Pay · −$8.50</button>
+            </div>
+            <div class="ledger-wrap" id="ledgerPanel" role="tabpanel" aria-live="polite">
+              <div class="ledger-heading"><span>INVOICE / PAYER</span><span>AMOUNT</span></div>
+              <div id="ledgerRows"></div>
+              <div class="ledger-total"><strong>Matched total</strong><strong id="ledgerTotal">$30,768.00</strong></div>
+              <div class="ledger-total"><span>Variance</span><strong class="variance" id="variance">$0.00 · EXACT</strong></div>
+              <div id="shortFlag" class="shortpay" hidden>HABITUAL SHORT-PAY DETECTED: −$8.50</div>
+            </div>
+            <div class="terminal-action"><button id="approveButton" type="button">Approve &amp; Queue for QBO</button></div>
+          </div>
+          <div class="terminal-caption">Deterministic subset-sum math. Zero LLM guessing on your numbers.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">The hidden AR tax</span><h2>Your cash flow shouldn't depend on who has free time on a Friday afternoon.</h2><p>B2B service firms with 10–50 staff outgrow QuickBooks' native reminders long before they can justify a $55,000/yr AR clerk. The result is trapped working capital and hours of manual detective work.</p></div>
+        <div class="problem-grid">
+          <article class="pain-card"><div class="metric">60–90+ DAYS PAST DUE</div><blockquote>“Overdue invoices are starting to get out of control... sitting 60 or 90 days past due with no follow-up for weeks.”</blockquote><p>QBO automated reminders get ignored or turned off, while buyers stall with “it took us a month to enter your invoice into our AP system.”</p></article>
+          <article class="pain-card"><div class="metric">3–7 HRS / WEEK IN EXCEL</div><blockquote>“A customer pays $30,768 in a lump sum without invoice numbers. It's like piecing together a puzzle without the picture.”</blockquote><p>Excel SUMPRODUCT Solver struggles past 30–40 open invoices, and clicking 100+ checkboxes manually in QBO burns expensive payroll.</p></article>
+          <article class="pain-card"><div class="metric">HABITUAL SHORT-PAYS &amp; UNAPPLIED CASH</div><blockquote>“They'll short-pay $8–$9 or send unlinked wires, leaving cash sitting in Unapplied Cash Income on our P&amp;L.”</blockquote><p>Chasing small discrepancies manually costs more than the shortfall—so margins quietly leak every month.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="calculator">
+          <div class="calc-head"><span class="eyebrow">Your working-capital estimate</span><h3>What is stalled AR costing you this month?</h3><p>Adjust the inputs to estimate a conservative recovery scenario and the annual cost of manual admin time.</p></div>
+          <div class="calc-body">
+            <div class="calc-controls">
+              <div class="range-group"><div class="range-top"><label for="overdueRange">Current 60+ Day Overdue AR</label><output id="overdueValue" for="overdueRange">$48,200</output></div><input id="overdueRange" type="range" min="15000" max="250000" step="1000" value="48200"><div class="range-limits"><span>$15,000</span><span>$250,000</span></div></div>
+              <div class="range-group"><div class="range-top"><label for="hoursRange">Weekly Hours Matching &amp; Chasing</label><output id="hoursValue" for="hoursRange">6 hrs</output></div><input id="hoursRange" type="range" min="2" max="15" step="1" value="6"><div class="range-limits"><span>2 hrs</span><span>15 hrs</span></div></div>
+            </div>
+            <div class="calc-results" aria-live="polite">
+              <div class="result"><label>Conservative 30-Day Cash Recovery (30%)</label><strong id="recoveryValue">$14,460</strong></div>
+              <div class="result"><label>Annual Admin Payroll Burn (@ $35/hr)</label><strong id="burnValue">$10,920 / yr</strong></div>
+              <div class="result"><label>ROI vs. Settlemark Pilot ($3,500)</label><strong id="roiValue">4.1× return</strong></div>
+              <p class="calc-note">Illustrative estimates only. Actual recoveries depend on your ledger, payer behavior and eligibility.</p>
+            </div>
+          </div>
+          <div class="calc-cta"><a class="text-link" href="#audit-form">Verify your exact numbers with our free 48-hour CSV audit →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="system">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">How Settlemark works</span><h2>Four plain-English steps. Zero accounting chaos.</h2></div>
+        <div class="module-list">
+          <article class="module"><div class="module-number">01</div><div><h3>Remittance &amp; Deposit Capture</h3><p>Ingests exported bank deposits and remittance PDFs—automatically normalizing mismatched corporate parent and subsidiary names (e.g., “ACME CORP HQ” → “Acme Regional”).</p></div></article>
+          <article class="module"><div class="module-number">02</div><div><h3>Instant Subset-Sum Matching</h3><p>Deterministic math finds the exact combination of open invoices and credit memos that equals any lump-sum ACH or wire in under 2 seconds—flagging $8–$9 short-pays to the penny.</p></div></article>
+          <article class="module"><div class="module-number">03</div><div><h3>1-Click Controller Approval Queue</h3><p>Nothing ever writes to QuickBooks autonomously. Your bookkeeper or controller reviews each matched batch, verifies variance flags, and approves in 10 minutes a week.</p></div></article>
+          <article class="module"><div class="module-number">04</div><div><h3>Polite, AP-Lag-Aware Chasing</h3><p>Starts with a helpful Day-7 AP Intake Check (“Confirming invoice #1042 is logged in your AP queue for Net-30 processing”)—eliminating late-entry excuses. Escalating plain-text follow-ups send from your domain, attach the PDF invoice, and pause within 60 seconds the moment a payment or reply lands.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="security">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Built for controllers</span><h2>Your books stay clean. Your client relationships stay protected.</h2></div>
+        <div class="security-grid">
+          <article class="security-card"><div class="line-icon" aria-hidden="true">01</div><h3>Zero-LLM Data Privacy</h3><p>Your 48-hour CSV audit runs locally using deterministic Python math. Customer names, invoice IDs, and balances are never sent to OpenAI, Anthropic, or third-party AI training APIs. You can mask client names as “Client_001” before exporting.</p></article>
+          <article class="security-card"><div class="line-icon" aria-hidden="true">02</div><h3>Zero-Rogue-Email Protection</h3><p>Upload a VIP / Do-Not-Touch Exclusion List for strategic accounts. You approve every word of our plain-text follow-up templates before launch, and our 60-second auto-kill switch stops reminders immediately on reply or payment.</p></article>
+          <article class="security-card"><div class="line-icon" aria-hidden="true">03</div><h3>72-Hour Purge Guarantee</h3><p>If you decide not to move forward after your free 48-hour audit, all exported CSVs and diagnostic files are permanently deleted within 72 hours with written confirmation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Speed to cash</span><h2>From messy spreadsheets to live cash recovery in 14 days.</h2></div>
+        <div class="timeline">
+          <article class="timeline-step"><div class="step-time">STEP 0 · 48 HOURS · FREE</div><h3>Read-Only AR Leak Audit</h3><p>Export 2 CSVs. Receive a 1-page report showing exact trapped cash and auto-matched lump-sum deposits before spending a dollar.</p></article>
+          <article class="timeline-step"><div class="step-time">DAYS 1–3</div><h3>Mapping &amp; VIP Rules</h3><p>We configure your parent/subsidiary alias table, short-pay thresholds, and VIP Do-Not-Touch client list.</p></article>
+          <article class="timeline-step"><div class="step-time">DAYS 4–10</div><h3>Engine Build &amp; Template Sign-Off</h3><p>We wire your lump-sum matcher, 1-click Approval Queue, and plain-text Day-7/overdue templates for your exact approval.</p></article>
+          <article class="timeline-step"><div class="step-time">DAYS 11–14</div><h3>Live Launch &amp; Team Handoff</h3><p>System goes live with a 10-minute SOP walkthrough and your first Friday morning Cash-Recovered Digest.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Transparent investment</span><h2>One flat pilot fee. Backed by auditable cash math.</h2></div>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <span class="price-badge">FAST-ACTION AUDIT CALL RATE</span>
+            <div class="price-line"><span class="price money">$3,500</span><span class="old-price">$4,500 standard</span></div><div class="price-sub">One-time pilot setup</div>
+            <div class="terms">50% ($1,750) to kick off · 50% ($1,750) on Day-14 go-live</div>
+            <ul class="check-list"><li>Custom Lump-Sum &amp; Subsidiary Reconciliation Engine</li><li>1-Click Controller Approval Queue (Zero Unapproved Edits)</li><li>Day-7 AP Intake Check &amp; VIP-Protected Follow-Up Sequence</li><li>First 30 Days of Weekly Reconciliation Tuning Included ($499 value)</li><li>Optional Month 2+ Support: $499/mo (cancel anytime)</li></ul>
+            <a class="button full" href="#audit-form">Start With Your Free 48-Hr Audit →</a>
+          </article>
+          <div class="policy-stack">
+            <article class="policy-card"><span class="eyebrow">Policy 01 · Eligibility applies</span><h3>The 30-Day 2× Attributed Cash Guarantee</h3><p>For eligible firms with $30,000+ in 45+ day overdue AR (verified upfront during your free audit): if our system does not generate at least $7,000 in Attributed Cash Collected within 30 calendar days of go-live, we refund 100% of your $3,500 fee within 5 business days.<br><br><strong>Strict attribution:</strong> Counts ONLY (1) 45+ day overdue invoices at kickoff paid after receiving our logged intake/follow-up sequence, or (2) unmatched lump-sum / unapplied cash balances at kickoff reconciled and cleared.</p></article>
+            <article class="policy-card"><span class="eyebrow">Policy 02 · No lock-in</span><h3>True Ownership &amp; Zero Lock-In Clause</h3><p>After the 30-day pilot, you own the documented Python reconciliation scripts, payer-to-subsidiary alias tables, email templates, and a 1-page Loom SOP outright. Run it locally forever with $0 ongoing licensing fees to us.</p></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head"><span class="eyebrow">Straight answers</span><h2>Questions controllers ask before they send a file.</h2></div>
+        <div class="faq-list">
+          <article class="faq-item"><button class="faq-question" aria-expanded="false"><span>Do I have to give you my QuickBooks login for the free audit?</span><span aria-hidden="true">＋</span></button><div class="faq-answer" hidden>No. For the 48-hour audit, you simply export two read-only CSV files (Open_Invoices_Aging.csv and Recent_Bank_Deposits.csv). You can replace customer names with Client_001 in Excel before sending—our matcher works purely on invoice numbers, dates, and dollar amounts.</div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false"><span>What if we don't have $30,000+ in 45+ day overdue invoices?</span><span aria-hidden="true">＋</span></button><div class="faq-answer" hidden>We check that upfront during your free 48-hour audit. If you have less than $30,000 trapped in 45+ day AR, we will tell you honestly that you don't need our pilot yet and hand over your diagnostic report free of charge.</div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false"><span>Will your system email our VIP clients or send robotic reminders?</span><span aria-hidden="true">＋</span></button><div class="faq-answer" hidden>Never. You provide a VIP Do-Not-Touch list before launch, approve every plain-text template word-for-word, and our 60-second auto-kill switch pauses reminders instantly whenever a client replies or pays.</div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false"><span>How is this different from QuickBooks reminders, Chaser, or Kolleno?</span><span aria-hidden="true">＋</span></button><div class="faq-answer" hidden>Native QBO reminders are rigid and don't reconcile lump-sum deposits. Mid-market platforms like Kolleno ($545/user/mo) and Upflow ($390/mo+) lock you into recurring per-seat SaaS contracts that your team still has to configure. Settlemark is a 14-day done-for-you deterministic workflow you own outright.</div></article>
+          <article class="faq-item"><button class="faq-question" aria-expanded="false"><span>What happens if we don't continue the optional $499/mo retainer after Month 1?</span><span aria-hidden="true">＋</span></button><div class="faq-answer" hidden>Nothing breaks. You keep the documented local reconciliation script, alias map, email templates, and SOP so your existing bookkeeper can run it in 10 minutes a week without paying us another dollar.</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="audit-form">
+      <div class="container">
+        <div class="audit-shell">
+          <div class="audit-intro"><span class="eyebrow">Free · Read-only · 48 hours</span><h2>See your trapped cash before you spend a dollar.</h2><ul><li>Exact dollar breakdown trapped in 45–60 day and 90+ day buckets.</li><li>Live proof of your recent lump-sum deposits auto-matched to open invoices.</li><li>Conservative 30-day cash recovery projection + clear eligibility check for our 2× Guarantee.</li></ul><button class="text-link" type="button" data-modal="guideModal">Need help exporting the 2 CSVs from QBO? View 60-second guide →</button></div>
+          <div class="audit-form">
+            <form id="auditForm" novalidate>
+              <div class="form-grid">
+                <div class="field"><label for="fullName">Full Name *</label><input id="fullName" name="fullName" autocomplete="name" required placeholder="Your name"></div>
+                <div class="field"><label for="workEmail">Work Email *</label><input id="workEmail" name="workEmail" type="email" autocomplete="email" required placeholder="you@company.com"></div>
+                <div class="field"><label for="company">Company Name *</label><input id="company" name="company" autocomplete="organization" required placeholder="Company Ltd."></div>
+                <div class="field"><label for="role">Your Role</label><select id="role" name="role"><option value="">Select your role</option><option>Owner/Founder</option><option>Controller</option><option>COO/VP Ops</option><option>Accounting Manager</option><option>Bookkeeper</option></select></div>
+                <div class="field full-field"><label for="arRange">Estimated 60+ Day Overdue AR</label><select id="arRange" name="arRange"><option value="">Select an estimate</option><option>Under $30K</option><option>$30K–$75K</option><option>$75K–$150K</option><option>$150K+</option><option>Not Sure Yet</option></select></div>
+                <div class="field full-field"><fieldset><legend>Audit Preference</legend><label class="radio-line"><input type="radio" name="preference" value="Book a 15-min call first to discuss my AR workflow" checked>Book a 15-min call first to discuss my AR workflow</label><label class="radio-line"><input type="radio" name="preference" value="Send me a secure encrypted link to upload my 2 anonymized QBO CSVs">Send me a secure encrypted link to upload my 2 anonymized QBO CSVs</label></fieldset></div>
+                <div class="field full-field"><button class="button full" type="submit">Request My Free 48-Hour AR Leak Audit →</button><p class="form-note">Zero credentials required · Local deterministic processing · 72-hour data purge guarantee.</p><p class="form-error" id="formError" role="alert" hidden></p></div>
+              </div>
+            </form>
+            <div class="form-success" id="formSuccess" hidden><h3>Request details prepared.</h3><p id="successMessage"></p><p class="notice">This landing page is a static front end and does not transmit or store form data. Your email application should open with a prefilled request. Do not attach financial CSVs to ordinary email; wait for a secure upload link.</p><a class="button" href="mailto:founder@settlemark.co?subject=15-minute%20Settlemark%20intake%20call">Email Settlemark</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><div class="footer-brand">Settlemark</div><p>Deterministic Cash Application &amp; AR Recovery.</p><small>Operated by [Founder Full Name] · <a href="mailto:founder@settlemark.co">founder@settlemark.co</a> · [LinkedIn Profile Link]</small></div>
+      <div class="footer-links"><a href="#security">Data Security &amp; 72-Hour Purge Policy</a><span>© 2026 Settlemark. All rights reserved.</span></div>
+    </div>
+    <div class="container"><p class="disclaimer">QuickBooks Online is a registered trademark of Intuit Inc. Settlemark is not affiliated with or endorsed by Intuit.</p></div>
+  </footer>
+
+  <div class="modal-backdrop" id="sampleModal" hidden role="presentation">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="sampleTitle">
+      <div class="modal-head"><h2 id="sampleTitle">Redacted Sample Audit Report</h2><button class="close-modal" type="button" aria-label="Close dialog">✕</button></div>
+      <div class="modal-content"><div class="report">
+        <div class="report-top"><strong>SETTLEMARK</strong><span class="eyebrow">CONFIDENTIAL · REDACTED SAMPLE</span></div>
+        <h3>AR Leak Audit</h3><p class="eyebrow">Illustrative client snapshot · 25 November 2026</p>
+        <div class="report-stats"><div class="report-stat"><small>60+ DAY AR</small><strong>$48,200.00</strong></div><div class="report-stat"><small>30-DAY RECOVERY PROJECTION</small><strong>$14,460.00</strong></div><div class="report-stat"><small>DEPOSIT MATCH</small><strong>EXACT</strong></div></div>
+        <h4>Matched lump-sum deposit</h4><p class="mono">ACH CR · ACME CORPORATE HQ · $30,768.00</p>
+        <table><thead><tr><th>INVOICE</th><th>PAYER</th><th>AMOUNT</th></tr></thead><tbody><tr><td>#1041</td><td>Acme West</td><td>$8,420.00</td></tr><tr><td>#1044</td><td>Acme East</td><td>$11,250.00</td></tr><tr><td>#1049</td><td>Acme North</td><td>$6,898.00</td></tr><tr><td>#1052</td><td>Acme South</td><td>$4,200.00</td></tr><tr><th colspan="2">TOTAL · VARIANCE</th><th>$30,768.00 · $0.00</th></tr></tbody></table>
+        <p class="disclaimer">Illustrative sample only. Not a report generated from a real customer ledger.</p>
+      </div></div>
+    </section>
+  </div>
+  <div class="modal-backdrop" id="guideModal" hidden role="presentation">
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="guideTitle">
+      <div class="modal-head"><h2 id="guideTitle">Export 2 CSVs from QuickBooks Online</h2><button class="close-modal" type="button" aria-label="Close dialog">✕</button></div>
+      <div class="modal-content">
+        <ol class="guide-list">
+          <li><strong>Open invoices:</strong> In QuickBooks Online, open Reports and find Accounts Receivable Aging Detail (or your Open Invoices report). Set the report date to today.</li>
+          <li><strong>Export the aging report:</strong> Select Export, choose Excel, then save/export the data as CSV named <span class="mono">Open_Invoices_Aging.csv</span>.</li>
+          <li><strong>Recent bank deposits:</strong> Open your bank account register or transaction report, choose a recent date range (for example, the last 90 days), and export deposits as <span class="mono">Recent_Bank_Deposits.csv</span>.</li>
+          <li><strong>Check the files:</strong> Confirm the exports include invoice IDs, dates, open balances, deposit dates and amounts. Remove columns that are not needed.</li>
+        </ol>
+        <div class="guide-tip"><strong>Anonymization tip:</strong> In Excel, replace customer names in Column A with Client_001, Client_002, and so on before sharing. Keep invoice numbers, dates and amounts intact so matching still works.</div>
+        <p class="disclaimer">QuickBooks menus can vary by plan and interface. Never send account credentials. Use a secure upload link for financial files; this page does not provide one.</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    (() => {
+      const $ = (id) => document.getElementById(id);
+      const money = (n, decimals = 0) => new Intl.NumberFormat('en-US', {style:'currency',currency:'USD',minimumFractionDigits:decimals,maximumFractionDigits:decimals}).format(n);
+      const examples = {
+        exact: {deposit:'$30,768.00',memo:'ACH CR · ACME CORPORATE HQ',total:'$30,768.00',variance:'$0.00 · EXACT',rows:[['1041','Acme West','$8,420.00'],['1044','Acme East','$11,250.00'],['1049','Acme North','$6,898.00'],['1052','Acme South','$4,200.00']]},
+        short: {deposit:'$14,841.50',memo:'ACH CR · ACME REGIONAL',total:'$14,850.00',variance:'−$8.50 · SHORT',rows:[['2081','Acme West','$5,250.00'],['2084','Acme East','$4,800.00'],['2090','Acme North','$4,800.00']]}
+      };
+      let activeExample = 'exact';
+      function renderMatcher() {
+        const data = examples[activeExample];
+        $('depositAmount').textContent = data.deposit;
+        $('depositMemo').textContent = data.memo;
+        $('ledgerTotal').textContent = data.total;
+        $('variance').textContent = data.variance;
+        $('variance').classList.toggle('warn', activeExample === 'short');
+        $('shortFlag').hidden = activeExample !== 'short';
+        $('exactTab').setAttribute('aria-selected', String(activeExample === 'exact'));
+        $('shortTab').setAttribute('aria-selected', String(activeExample === 'short'));
+        $('ledgerRows').innerHTML = data.rows.map(([id,name,amount]) => '<div class="ledger-row"><span>#'+id+'</span><span class="name">'+name+'</span><strong>'+amount+'</strong></div>').join('');
+        $('approveButton').textContent = 'Approve & Queue for QBO';
+        $('approveButton').classList.remove('approved');
+        $('approveButton').disabled = false;
+        $('matchStatus').textContent = activeExample === 'exact' ? 'MATCHED IN 0.18s' : 'VARIANCE FLAGGED';
+        $('matchStatus').style.color = activeExample === 'exact' ? 'var(--verified)' : 'var(--warning)';
+        $('matchStatus').style.background = activeExample === 'exact' ? 'var(--verified-bg)' : 'var(--warning-bg)';
+      }
+      $('exactTab').addEventListener('click', () => {activeExample='exact';renderMatcher();});
+      $('shortTab').addEventListener('click', () => {activeExample='short';renderMatcher();});
+      $('approveButton').addEventListener('click', () => {
+        $('approveButton').textContent = '✓ Approved by Controller — Ready to Post';
+        $('approveButton').classList.add('approved');
+        $('approveButton').disabled = true;
+      });
+      function updateCalculator() {
+        const ar = Number($('overdueRange').value), hours = Number($('hoursRange').value);
+        const recovery = ar * .30, burn = hours * 35 * 52, roi = recovery / 3500;
+        $('overdueValue').textContent = money(ar);
+        $('hoursValue').textContent = hours + ' hrs';
+        $('recoveryValue').textContent = money(recovery);
+        $('burnValue').textContent = money(burn) + ' / yr';
+        $('roiValue').textContent = roi.toFixed(1) + '× return';
+      }
+      $('overdueRange').addEventListener('input', updateCalculator);
+      $('hoursRange').addEventListener('input', updateCalculator);
+      updateCalculator();
+
+      document.querySelectorAll('.faq-question').forEach((button) => {
+        button.addEventListener('click', () => {
+          const answer = button.nextElementSibling;
+          const expanded = button.getAttribute('aria-expanded') === 'true';
+          button.setAttribute('aria-expanded', String(!expanded));
+          answer.hidden = expanded;
+          button.lastElementChild.textContent = expanded ? '＋' : '−';
+        });
+      });
+
+      let lastFocus = null;
+      function openModal(id) {
+        const modal = $(id); if (!modal) return;
+        lastFocus = document.activeElement; modal.hidden = false;
+        document.body.style.overflow = 'hidden';
+        modal.querySelector('.close-modal').focus();
+      }
+      function closeModal(modal) {
+        modal.hidden = true; document.body.style.overflow = '';
+        if (lastFocus) lastFocus.focus();
+      }
+      document.querySelectorAll('[data-modal]').forEach((button) => button.addEventListener('click', () => openModal(button.dataset.modal)));
+      document.querySelectorAll('.modal-backdrop').forEach((backdrop) => {
+        backdrop.addEventListener('click', (event) => {if (event.target === backdrop) closeModal(backdrop);});
+        backdrop.querySelector('.close-modal').addEventListener('click', () => closeModal(backdrop));
+      });
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {const open = document.querySelector('.modal-backdrop:not([hidden])'); if (open) closeModal(open);}
+        if (event.key === 'Tab') {
+          const open = document.querySelector('.modal-backdrop:not([hidden])'); if (!open) return;
+          const focusable = [...open.querySelectorAll('button,a[href],input,select,[tabindex]:not([tabindex="-1"])')].filter(el => !el.disabled);
+          if (!focusable.length) return;
+          if (event.shiftKey && document.activeElement === focusable[0]) {event.preventDefault();focusable[focusable.length-1].focus();}
+          else if (!event.shiftKey && document.activeElement === focusable[focusable.length-1]) {event.preventDefault();focusable[0].focus();}
+        }
+      });
+      $('menuToggle').addEventListener('click', () => {
+        const open = $('navLinks').classList.toggle('open');
+        $('menuToggle').setAttribute('aria-expanded', String(open));
+      });
+      $('navLinks').querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        $('navLinks').classList.remove('open'); $('menuToggle').setAttribute('aria-expanded','false');
+      }));
+
+      $('auditForm').addEventListener('submit', (event) => {
+        event.preventDefault();
+        const form = event.currentTarget, error = $('formError');
+        const name = $('fullName').value.trim(), email = $('workEmail').value.trim(), company = $('company').value.trim();
+        const emailOK = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        if (!name || !company || !emailOK) {
+          error.hidden = false;
+          error.textContent = !name ? 'Please enter your full name.' : !emailOK ? 'Please enter a valid work email address.' : 'Please enter your company name.';
+          (!name ? $('fullName') : !emailOK ? $('workEmail') : $('company')).focus();
+          return;
+        }
+        error.hidden = true;
+        const values = new FormData(form);
+        const subject = encodeURIComponent('Free 48-hour AR Leak Audit request — ' + company);
+        const body = encodeURIComponent('Name: '+name+'\nWork email: '+email+'\nCompany: '+company+'\nRole: '+(values.get('role')||'Not provided')+'\nEstimated 60+ day overdue AR: '+(values.get('arRange')||'Not provided')+'\nAudit preference: '+values.get('preference')+'\n\nPlease follow up with next steps.');
+        $('successMessage').textContent = 'Your request for Settlemark’s free 48-hour AR Leak Audit is ready. We are preparing an email draft addressed to founder@settlemark.co.';
+        form.hidden = true; $('formSuccess').hidden = false;
+        window.location.href = 'mailto:founder@settlemark.co?subject='+subject+'&body='+body;
+      });
+    })();
+  </script>
+</body>
+</html>
